@@ -1,4 +1,5 @@
 import 'package:emart/consts/consts.dart';
+import 'package:emart/views/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: appname,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          scaffoldBackgroundColor: Colors.transparent,
+          appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
+          fontFamily: regular),
+      home: SplashScreen(),
     );
   }
 }
